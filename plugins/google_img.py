@@ -50,7 +50,7 @@ async def google_img(message: Message):
         "q": query,
         "num": 5,
         "safe": "off",
-        "fileType": "jpg",
+        "fileType": "jpg" "png" "webp",
         "imgType": "photo",
         "imgSize": "XLARGE",
     }
