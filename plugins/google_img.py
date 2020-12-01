@@ -48,7 +48,7 @@ async def google_img(message: Message):
     query = message.input_str
     search = {
         "q": query,
-        "num": 5,
+        "num": 10,
         "safe": "off",
         "fileType": "jpg" "png" "webp",
         "imgType": "photo",
