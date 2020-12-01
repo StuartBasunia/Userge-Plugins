@@ -52,7 +52,7 @@ async def google_img(message: Message):
         "safe": "off",
         "fileType": "jpg",
         "imgType": "photo",
-        "imgSize": "XLARGE",
+        "imgSize": "HUGE",
     }
     await message.edit("`Processing...`")
     fetcher.search(search_params=search)
@@ -73,7 +73,7 @@ async def google_img(message: Message):
                 new_im.paste(image, mask=image.split()[a_dex])
                 new_im.save(imgs, "JPEG")
         ss.append(InputMediaPhoto(str(imgs)))
-        if len(ss) == 5:
+        if len(ss) == 10:
             break
     await message.reply_chat_action("upload_photo")
     await message.reply_media_group(ss, True)
