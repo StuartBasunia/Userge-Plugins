@@ -48,7 +48,7 @@ async def google_img(message: Message):
     query = message.input_str
     search = {
         "q": query,
-        "num": 10,
+        "num": 7,
         "safe": "off",
         "fileType": "jpg",
         "imgType": "photo",
@@ -73,7 +73,7 @@ async def google_img(message: Message):
                 new_im.paste(image, mask=image.split()[a_dex])
                 new_im.save(imgs, "JPEG")
         ss.append(InputMediaPhoto(str(imgs)))
-        if len(ss) == 10:
+        if len(ss) == 7:
             break
     await message.reply_chat_action("upload_photo")
     await message.reply_media_group(ss, True)
