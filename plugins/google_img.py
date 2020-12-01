@@ -71,8 +71,8 @@ async def google_img(message: Message):
             if a_dex != -1:
                 new_im = Image.new("RGB", image.size, (255, 255, 255))
                 new_im.paste(image, mask=image.split()[a_dex])
-                new_im.save(imgs)
-        ss.append(InputMediaPhoto(str(imgs, "JPEG")))
+                new_im.save(imgs, "JPEG")
+        ss.append(InputMediaPhoto(str(imgs)))
         if len(ss) == 15:
             break
     await message.reply_chat_action("upload_photo")
